@@ -1,7 +1,19 @@
 import React from 'react';
-import {jsx,css} from '@emotion/react';
+import {jsx,css,keyframes} from '@emotion/react';
 import styled from'@emotion/styled';
 
+const slideIn=keyframes`
+    0% {
+      transform: translate(0px, 0px);
+    }
+    50% {
+      transform: translate(200px, 0px);
+    }
+    100% {
+      transform: translate(0px, 0px);
+    }
+  }
+`;
 
 const GlassmorphStyle= styled.div`
     width:30%;
@@ -17,7 +29,8 @@ const GlassmorphStyle= styled.div`
 
 const FirstSectionImg=styled.img`
     width:50%;
-`
+    animation:${slideIn} 4s infinite;
+`;
 
 const FirstSection=styled.section`
     width:100%;
@@ -25,7 +38,7 @@ const FirstSection=styled.section`
     flex-direction:column;
     justify-content:center;
     padding:1rem;
-`
+`;
 
 const SecondSection=styled.section`
     display:flex;
@@ -33,7 +46,7 @@ const SecondSection=styled.section`
     justify-content: space-around;
     padding:1rem;
 
-`
+`;
 
 const Title = styled.h1`
     color: blue;
